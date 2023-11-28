@@ -1,0 +1,58 @@
+PRINTF
+
+NAME
+    _printf - Custom printf function
+
+SYNOPSIS
+    #include "main.h"
+
+    int _printf(const char *format, ...);
+
+DESCRIPTION
+    _printf is a custom implementation of the printf function in C that allows formatted output to the standard output (usually the console). It supports various format specifiers similar to the standard printf.
+
+    The format string contains format specifiers and ordinary characters. Format specifiers begin with the '%' character, followed by optional flags, width, precision, and length modifiers, and end with a conversion specifier.
+
+    The _printf function takes the format string as its first argument, followed by any additional arguments required by the format specifiers.
+
+FORMAT SPECIFIERS
+    The following format specifiers are supported:
+
+    %c  Character - Prints a single character.
+    %s  String - Prints a null-terminated string.
+    %d  Integer - Prints a signed decimal integer.
+    %i  Integer - Prints a signed decimal integer (same as %d).
+    %u  Unsigned Integer - Prints an unsigned decimal integer.
+    %x  Hexadecimal - Prints an unsigned integer in lowercase hexadecimal.
+    %X  Hexadecimal - Prints an unsigned integer in uppercase hexadecimal.
+    %o  Octal - Prints an unsigned integer in octal.
+    %%  Percent - Prints a percent symbol.
+
+RETURN VALUE
+    On success, _printf returns the number of characters printed (excluding the null terminator). On error, it returns -1.
+
+EXAMPLES
+    #include "main.h"
+
+    int main(void)
+    {
+        int len;
+        unsigned int ui;
+
+        len = _printf("Hello, world!\n");
+        _printf("Length: [%d]\n", len);
+        ui = 123456;
+        _printf("Unsigned: [%u]\n", ui);
+        _printf("Hexadecimal: [%x]\n", ui);
+        _printf("Percent: [%%]\n");
+        return (0);
+    }
+
+BUGS
+    Report any bugs to the GitHub repository: https://github.com/yourusername/your-repo
+
+SEE ALSO
+    printf
+
+AUTHORS
+    Ismael Pimentel and Luis Rivera <7343@holbertonstudents.com,6898@holbertonstudents.com>
